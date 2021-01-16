@@ -1,0 +1,30 @@
+@import '../abstracts/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+
+.loading {
+    margin: 250px 400px;
+
+
+    .MuiLinearProgress-colorPrimary {
+        background-color: var(--twitter-background);
+    }
+    .MuiLinearProgress-barColorPrimary {
+        background-color:  rgba(29, 242, 40, 0.8)
+    }
+    h3 {
+        font-family: 'Langar', cursive;
+        color:  rgba(145, 150, 144, 0.8);
+        font-size: 20px;
+        text-align: center;
+
+        @include respond(phone)  {
+          font-size: 14px;
+        }
+    }
+    @include respond(tab-land)  {
+        margin: 300px 200px;
+    }
+    @include respond(phone)  {
+        margin: 250px 100px;
+    }
+}

@@ -1,0 +1,61 @@
+// Desktop first media queries
+
+/* 
+Screen Widths
+0-600px : phone
+600-900px:   Tablet Potrait
+900-1200px:   Tablet Landscape
+[1200px-1800px] is where normal styles applies
+1800px + :   Big Desktop
+@content helps to perse block of code into mixin
+$breakpoint arguement choices:
+- phone
+- tab-port //portrait tab
+- tab-land //landscape tab
+- big-desktop
+we use ems for media queries 1em = 16px
+000px/ 16 = em
+em adjsut based on the root px set by user in the browser
+*/
+
+@mixin respond($breakpoint) {
+
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) {
+			@content
+		} 
+	};
+
+	@if $breakpoint == tab-port {
+		@media (max-width: 986px) {
+			@content
+		}
+	};
+
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) {
+			@content
+		}
+	};
+
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) {
+			@content
+		}
+	}
+};
+
+@mixin shrinkLabel {
+	top: -14px;
+	font-size: 12px;
+	color: $color-blue;
+  }
+
+  @mixin shrinkLabelDate {
+	top: -14px;
+	left: 5px;
+	font-size: 12px;
+	color: $color-blue;
+  }
+  
+  

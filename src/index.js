@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import AlertTemplate from './components/AlertTemplate/AlertTemplate'
+import {  positions, Provider as AlertProvider } from 'react-alert'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+const options = {
+  timeout: 2000,
+  position: positions.TOP_CENTER,
+
+
+};
+
 ReactDOM.render(
   <React.StrictMode>
+     <AlertProvider template={AlertTemplate} {...options}>
     <App />
+    </AlertProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

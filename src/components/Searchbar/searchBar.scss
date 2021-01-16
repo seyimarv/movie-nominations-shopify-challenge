@@ -1,0 +1,35 @@
+
+ @import '../abstracts/mixins';
+ 
+ .searchInput {  
+     display: flex;
+     background-color: rgb(82, 76, 78);
+     border-radius: 10px;
+     padding: 0px 10px;
+     margin: 0px 40px;
+     height: 35px;
+
+     @include respond(phone) {
+         margin: 0px;
+     }
+     .searchIcon {
+         color: rgb(246, 238, 238);
+         margin-top: 5px !important;
+       
+     }
+     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color:white !important;
+        opacity: 1; /* Firefox */
+      }
+      
+     input {
+         border: none;
+         background-color: rgb(82, 76, 78);
+         width: 100%;
+         outline: none !important;
+         color: white !important;
+         margin: 0px 10px;
+
+         
+     }
+ }
