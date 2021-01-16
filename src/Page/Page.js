@@ -98,6 +98,7 @@ const Page = () => {
             getMovies('Woman')
         }
     }
+  
 
 
     const onSearchSubmit = e => {
