@@ -1,16 +1,18 @@
 import React from 'react'
-import './searchBar.scss'
+import './searchbar.scss'
 import SearchIcon from '@material-ui/icons/Search'
 
 
 const SearchBar = ({onSearchChange, onSearchSubmit}) => {
-
-
+   const handleKeyPress = (e) => {
+        if(e.key === 'Enter'){
+            onSearchSubmit(e)
+        }
+      }
     return (
-    
         <div className='searchInput'>
            <SearchIcon onClick={onSearchSubmit} className='searchIcon'/>
-           <input placeholder='search movie by title' onChange={onSearchChange}/>
+           <input placeholder='Search movie by title' onKeyPress={handleKeyPress} onChange={onSearchChange}/>
          
         </div>
     )

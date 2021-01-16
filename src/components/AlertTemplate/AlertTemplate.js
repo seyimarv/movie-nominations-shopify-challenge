@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const alertStyle = {
   backgroundColor: '#008080',
   color: 'white',

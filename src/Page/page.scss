@@ -1,6 +1,4 @@
-@import '../components/abstracts/mixins';
-@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import '../styles/scss/abstracts/mixins';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -58,6 +56,25 @@
     color: whitesmoke !important;
     padding: 20px;
 
+    h4 {
+      font-size: 13px;
+      background-color: rgb(9, 138, 9);
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+      
+      @media only screen and (min-width: 1000px) {
+        display: none;
+      
+      }
+    }
+
+    h3 {
+
+      @include respond(phone) {
+        font-size: 15px;
+      }
+    }
 
   
     h1 {
